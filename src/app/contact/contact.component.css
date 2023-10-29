@@ -22,11 +22,13 @@
 form {
   margin-top: 100px;
   text-align: unset;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 form input {
   display: block;
-  width: 100%;
+  width: calc(100% - (20px * 2));
   margin-bottom: 20px;
   border: 2px solid var(--accent);
   padding: 20px;
@@ -91,10 +93,34 @@ form input[type=submit] {
   font-size: 30px;
   margin-top: 50px;
   padding: 30px;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 p {
   margin-top: 50px;
   text-align: left;
   font-size: 18px;
+}
+
+@media (max-width: 700px) {
+  .main {
+    margin-top: -15%;
+    background-size: 500% 139%;
+    background-position: 68% 11%;
+  }
+
+  form {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: unset;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  form input[type=submit] {
+    width: 100%;
+  }
 }

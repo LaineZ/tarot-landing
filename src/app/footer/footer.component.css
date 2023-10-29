@@ -17,6 +17,19 @@ footer {
   flex-grow: 1;
 }
 
-img {
+.socials img {
   height: 128px;
+}
+
+.socials {
+  display: flex;
+}
+
+@media (max-width: 700px) {
+  .content {
+    flex-direction: column-reverse;
+  }
+  .socials img {
+    height: 80px;
+  }
 }

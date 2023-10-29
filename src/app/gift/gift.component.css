@@ -31,8 +31,12 @@ main {
   color: white;
   font-weight: bold;
   border-radius: 10px;
-  min-width: 250px;
+  min-width: 270px;
   height: fit-content;
+}
+
+.bg-text-mobile {
+  display: none;
 }
 
 .gift {
@@ -43,4 +47,26 @@ main {
 
 .gift img {
   height: 100px;
+}
+
+@media (max-width: 700px) {
+  .bg-text-mobile {
+    display: block !important;
+  }
+
+  .bg-text {
+    display: none;
+  }
+
+  .content {
+    flex-direction: column-reverse;
+  }
+
+  .gift {
+    flex-direction: column;
+  }
+
+  .gift img {
+    height: 200px;
+  }
 }
