@@ -1,7 +1,7 @@
 .main {
   min-height: 1180px;
   height: 100vh;
-  background: url("/assets/images/bg.png");
+  background: url("/assets/images/bg.webp");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -113,7 +113,7 @@ p {
   }
 
   .main {
-    background: url("/assets/images/bg-mobile.png");
+    background: url("/assets/images/bg-mobile.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center bottom;
