@@ -5,12 +5,16 @@ import { AppComponent } from './app.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { ContactComponent } from './contact/contact.component';
 import {FormsModule} from "@angular/forms";
+import { GiftComponent } from './gift/gift.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
-    ContactComponent
+    ContactComponent,
+    GiftComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,22 @@
+footer {
+  position: relative;
+  z-index: 2;
+  background-color: var(--accent);
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+.content p {
+  flex-grow: 1;
+}
+
+img {
+  height: 128px;
+}
