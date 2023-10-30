@@ -19,6 +19,12 @@ footer {
 
 .socials img {
   height: 128px;
+  transition: transform 300ms;
+}
+
+.socials img:hover {
+  transform: scale(1.2);
+  transition: transform 300ms;
 }
 
 .socials {

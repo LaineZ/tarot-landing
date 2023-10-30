@@ -47,6 +47,12 @@ main {
 
 .gift img {
   height: 100px;
+  transition: transform 300ms
+}
+
+.gift img:hover {
+  transform: scale(1.2);
+  transition: transform 300ms;
 }
 
 @media (max-width: 700px) {
