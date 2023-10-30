@@ -98,7 +98,7 @@ p {
 
 .content-mobile {
   display: none;
-  margin: 10px;
+  margin: 40px 10px 10px 10px;
   position: relative;
 }
 
@@ -172,13 +172,14 @@ p {
     font-size: 5vw;
     min-width: unset;
     width: unset;
+    margin-top: 50px;
     padding: 20px 30px 20px 30px;
     border: 5px solid #e7f1fe;
   }
 
   .signup-background {
     background-size: clamp(50px, 10%, 100px);
-    top: 10px;
+    top: -20px;
     right: 10px;
     transform: rotate(7deg);
   }

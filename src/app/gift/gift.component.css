@@ -65,14 +65,14 @@ main {
   }
 
   .content {
-    flex-direction: column-reverse;
-  }
-
-  .gift {
     flex-direction: column;
   }
 
+  .gift {
+    flex-direction: column-reverse;
+  }
+
   .gift img {
-    height: 200px;
+    height: 256px;
   }
 }
