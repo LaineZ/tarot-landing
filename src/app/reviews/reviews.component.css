@@ -1,0 +1,53 @@
+.wrapper {
+  background-image: url("/assets/images/bg-reviews.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.reviews-desktop {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  padding-top: 200px;
+}
+
+.review-image {
+  height: 40vw;
+  min-height: 400px;
+  max-height: 1200px;
+}
+
+.review {
+  height: 40vw;
+  min-height: 400px;
+  max-height: 1200px;
+  margin-left: 40px;
+  margin-bottom: 200px;
+  position: relative;
+  margin-top: 40px;
+}
+
+.review h1 {
+  color: black;
+  position: absolute;
+  top: -60px;
+}
+
+.review:first-of-type {
+  margin-left: unset;
+}
+
+.reviews-mobile {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .reviews-desktop {
+    display: none;
+  }
+
+  .reviews-mobile {
+    display: flex;
+  }
+}

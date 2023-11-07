@@ -7,6 +7,7 @@ import { ContactComponent } from './contact/contact.component';
 import {FormsModule} from "@angular/forms";
 import { GiftComponent } from './gift/gift.component';
 import { FooterComponent } from './footer/footer.component';
+import { ReviewsComponent } from './reviews/reviews.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FooterComponent } from './footer/footer.component';
     MainPageComponent,
     ContactComponent,
     GiftComponent,
-    FooterComponent
+    FooterComponent,
+    ReviewsComponent,
   ],
   imports: [
     BrowserModule,
