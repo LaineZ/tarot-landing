@@ -1,7 +1,7 @@
 .slideshow {
   display: flex;
   align-items: center;
-  min-height: 100vh;
+  min-height: 1000px;
   flex-grow: 0;
   flex-shrink: 0;
   margin-left: 10px;

@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { SlideshowComponent } from './slideshow/slideshow.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { PricesComponent } from './prices/prices.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     FooterComponent,
     ReviewsComponent,
     SlideshowComponent,
+    PricesComponent,
   ],
   imports: [
     BrowserModule,
