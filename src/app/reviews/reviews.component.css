@@ -28,6 +28,10 @@
   margin-top: 40px;
 }
 
+.reviews-mobile {
+    width: 100%;
+}
+
 .review h1 {
   color: black;
   position: absolute;
@@ -48,6 +52,14 @@
   }
 
   .reviews-mobile {
-    display: flex;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
   }
+}
+
+.reviews-carousel {
+  display: flex;
+  overflow: hidden;
 }

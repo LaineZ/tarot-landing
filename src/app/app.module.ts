@@ -8,6 +8,8 @@ import {FormsModule} from "@angular/forms";
 import { GiftComponent } from './gift/gift.component';
 import { FooterComponent } from './footer/footer.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { SlideshowComponent } from './slideshow/slideshow.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -17,10 +19,12 @@ import { ReviewsComponent } from './reviews/reviews.component';
     GiftComponent,
     FooterComponent,
     ReviewsComponent,
+    SlideshowComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

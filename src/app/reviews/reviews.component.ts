@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {ReviewsStateService} from "../reviews-state.service";
 
 @Component({
   selector: 'app-reviews',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./reviews.component.css']
 })
 export class ReviewsComponent {
+  constructor(private reviews: ReviewsStateService) {
+  }
 
+  getData() {
+    return this.reviews.getData();
+  }
 }

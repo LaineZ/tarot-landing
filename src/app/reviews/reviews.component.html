@@ -1,24 +1,12 @@
 <div class="wrapper">
   <div class="reviews-desktop">
-    <div class="review">
-      <h1>МАРИНА</h1>
-      <img alt="Отзыв 1" class="review-image" src="/assets/images/reviews/1.png">
-    </div>
-    <div class="review">
-      <h1>ОЛЬГА</h1>
-      <img  alt="Отзыв 2" class="review-image" src="/assets/images/reviews/2.png">
-    </div>
-    <div class="review">
-      <h1>ОКСАНА</h1>
-      <img alt="Отзыв 3" class="review-image" src="/assets/images/reviews/3.png">
-    </div>
-    <div class="review">
-      <h1>ЛАЛА</h1>
-      <img alt="Отзыв 4" class="review-image" src="/assets/images/reviews/4.png">
+    <div class="review" *ngFor="let item of getData()">
+      <h1>{{ item.name }}</h1>
+      <img alt="Отзыв 1" class="review-image" [src]="item.image">
     </div>
   </div>
 
   <div class="reviews-mobile">
-
+    <app-slideshow></app-slideshow>
   </div>
 </div>

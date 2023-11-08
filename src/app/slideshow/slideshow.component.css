@@ -1,0 +1,42 @@
+.slideshow {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+.slide {
+  margin: 10px;
+}
+
+.slide h1 {
+  color: black;
+  text-align: center;
+}
+
+.slide img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+}
+
+.arrow-button {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  background-image: url("/assets/images/arrow-button.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-width: 32px;
+  min-height: 32px;
+  width: 10vw;
+  height: 10vw;
+  border: 3px solid #6a7175;
+  border-radius: 300px;
+  background-color: white;
+}

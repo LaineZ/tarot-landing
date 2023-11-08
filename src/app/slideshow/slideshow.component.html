@@ -1,0 +1,9 @@
+<div class="slideshow">
+  <button (click)="prevSlide()" class="arrow-button"></button>
+  <div class="slide" [@slideAnimation]="currentSlideIndex">
+    <h1>{{ slides[currentSlideIndex].name }}</h1>
+    <img id="review" [src]="slides[currentSlideIndex].image" [alt]="'Отзыв от пользователя ' + slides[currentSlideIndex].name">
+  </div>
+  <button (click)="nextSlide()" style="transform: rotate(180deg)" class="arrow-button"></button>
+</div>
+
