@@ -34,10 +34,6 @@ main {
   height: fit-content;
 }
 
-.bg-text-mobile {
-  display: none;
-}
-
 .gift {
   display: flex;
   justify-content: center;
@@ -46,7 +42,8 @@ main {
 
 .gift img {
   height: 100px;
-  transition: transform 300ms
+  transition: transform 300ms;
+  margin: 20px;
 }
 
 .gift img:hover {
@@ -55,23 +52,21 @@ main {
 }
 
 @media (max-width: 700px) {
-  .bg-text-mobile {
-    display: block !important;
-  }
-
-  .bg-text {
-    display: none;
-  }
-
   .content {
     flex-direction: column;
   }
 
-  .gift {
-    flex-direction: column-reverse;
+  .gift img {
+    height: 15vw;
+    margin: unset;
+    margin-left: 10px;
   }
 
-  .gift img {
-    height: 256px;
+  .description {
+    margin-bottom: unset;
+  }
+
+  .bg-text {
+    padding: 5px;
   }
 }
