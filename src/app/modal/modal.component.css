@@ -1,0 +1,42 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  backdrop-filter: blur(5px);
+}
+
+.modal {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-header {
+  margin-left: auto;
+  text-align: right;
+}
+
+.modal-header button {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+}
+
+

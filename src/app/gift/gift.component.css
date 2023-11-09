@@ -2,8 +2,6 @@ main {
   border-top: 5px solid var(--accent);
   border-bottom: 5px solid var(--accent);
   background-color: #bdd9ec;
-  position: relative;
-  z-index: 2;
   color: black;
   margin-left: auto;
   margin-right: auto;

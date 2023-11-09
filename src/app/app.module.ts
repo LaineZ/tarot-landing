@@ -11,7 +11,9 @@ import { ReviewsComponent } from './reviews/reviews.component';
 import { SlideshowComponent } from './slideshow/slideshow.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { PricesComponent } from './prices/prices.component';
-
+import {NgxMaskDirective, NgxMaskPipe, provideNgxMask} from "ngx-mask";
+import { ModalComponent } from './modal/modal.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,13 +24,19 @@ import { PricesComponent } from './prices/prices.component';
     ReviewsComponent,
     SlideshowComponent,
     PricesComponent,
+    ModalComponent,
+    ContactFormComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgxMaskDirective,
+    NgxMaskPipe
   ],
-  providers: [],
+  providers: [
+    provideNgxMask()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

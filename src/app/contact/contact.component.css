@@ -111,9 +111,46 @@ form input[type=submit]:hover {
   transition: all 300ms;
 }
 
-p {
+form input[type=submit]:disabled {
+  background-color: #6a7175;
+  border: unset;
+  color: white;
+  cursor: not-allowed;
+  transition: all 300ms;
+}
+
+.invalid-input {
+  border: 2px solid red !important;
+}
+
+.error-message {
+  color: red;
+}
+
+form p {
   text-align: left;
   font-size: 18px;
+}
+
+.modal-message {
+  min-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.modal-message button {
+  background-color: #25AE88;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 10px;
+  color: #e7f1fe;
+  transition: background-color 200ms;
+}
+
+.modal-message button:hover {
+  background-color: #0a523f;
+  transition: background-color 200ms;
 }
 
 @media (max-width: 700px) {

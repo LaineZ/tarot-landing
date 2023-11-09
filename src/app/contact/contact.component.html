@@ -2,19 +2,46 @@
   <div class="content">
     <h1>Если хотите, я могу сама связаться с вами позже. Просто
       оставьте свой контакт и коротко опишите свой вопрос</h1>
-      <form>
-        <input type="text" placeholder="ВАШЕ ИМЯ">
-        <input type="text" [required]="true" placeholder="НОМЕР ТЕЛ., INSTAGRAM ИЛИ TELEGRAM (обязательное поле)*">
-        <input type="text" placeholder="КОРОТКО СУТЬ ИНТЕРЕСУЮЩЕГО ВОПРОСА">
-        <input type="submit" value="Получить консультацию">
-        <p>Я отвечу вам в течении суток. После некоторых уточняющих вопросов я отправлю вам всю
-          информацию по стоимости на WhatsApp, Telegram, Viber или Instagram Direct</p>
-        <div class="checkbox">
-          <input type="checkbox" [required]="true">
-          <label>
-            Я согласен на обработку персональных данных
-          </label>
-        </div>
-      </form>
+    <form (ngSubmit)="onSubmit()" #myForm="ngForm" [noValidate]="false">
+      <input type="text" name="name" [(ngModel)]="formData.name"  placeholder="ВАШЕ ИМЯ">
+      <input type="tel" name="phone" [(ngModel)]="formData.phone"  placeholder="НОМЕР ТЕЛЕФОНА (обязательное поле)*" mask="+0000 000 00-00" required [ngClass]="{'invalid-input': phoneFormatError}">
+      <input type="email" name="email" [(ngModel)]="formData.email"  placeholder="EMAIL (обязательное поле)*" required [ngClass]="{'invalid-input': emailFormatError}">
+      <input type="text" name="question" [(ngModel)]="formData.question"  placeholder="КОРОТКО СУТЬ ИНТЕРЕСУЮЩЕГО ВОПРОСА">
+      <input type="submit" value="Получить консультацию" [disabled]="sending">
+      <label class="error-message" *ngIf="!dataProcessingAgreement">
+        Согласитесь на обработку персональных данных
+      </label>
+      <label *ngIf="phoneFormatError" class="error-message">Неверный формат номера телефона</label>
+      <label *ngIf="emailFormatError" class="error-message">Неверный формат Email</label>
+      <p>Я отвечу вам в течении суток. После некоторых уточняющих вопросов я отправлю вам всю
+        информацию по стоимости на WhatsApp, Telegram, Viber или Instagram Direct</p>
+      <div class="checkbox">
+        <input type="checkbox" name="agree" [(ngModel)]="formData.agree" required>
+        <label>
+          Я согласен на обработку персональных данных
+        </label>
+        <br>
+      </div>
+    </form>
+    <app-modal #modalSuccess>
+      <div class="modal-message">
+        <img src="/assets/images/success.svg" width="128">
+        <br>
+        <h2>Успешно</h2>
+        <p>С вами свяжутся в ближайшее время</p>
+        <button (click)="modalSuccess.closeModal()">ОК</button>
+      </div>
+    </app-modal>
+
+    <app-modal #modalFailure>
+      <div class="modal-message">
+        <img src="/assets/images/failure.svg" width="128">
+        <br>
+        <h2>Ошибка системы</h2>
+        <p>Произошла ошибка, повторите попытку позже</p>
+        <button (click)="modalSuccess.closeModal()">ОК</button>
+      </div>
+    </app-modal>
+
   </div>
 </div>
