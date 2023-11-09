@@ -41,9 +41,23 @@
         <div class="prices-image-mobile"></div>
         <div class="bottom-text">
           <h2>Я также работаю с индивидуальными запросами</h2>
-          <button>ОБРАТИТЬСЯ</button>
+          <button class="contact-button" (click)="modalContact.openModal()">ОБРАТИТЬСЯ</button>
         </div>
       </div>
     </div>
   </div>
+  <app-modal #modalContact>
+    <h2 style="text-align: center; color: black;">Связь</h2>
+    <app-contact-form style="color: black" (onSent)="modalSuccess.openModal()"></app-contact-form>
+  </app-modal>
+
+  <app-modal #modalSuccess [closeable]="false">
+    <div class="modal-message">
+      <img src="/assets/images/success.svg" width="128">
+      <br>
+      <h2>Успешно</h2>
+      <p>С вами свяжутся в ближайшее время</p>
+      <button (click)="modalContact.closeModal(); modalSuccess.closeModal();">ОК</button>
+    </div>
+  </app-modal>
 </div>

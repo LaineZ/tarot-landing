@@ -7,6 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ModalComponent implements OnInit {
   @Input() isOpen: boolean = false;
+  @Input() closeable: boolean = true;
 
   ngOnInit() {
     if (this.isOpen) {

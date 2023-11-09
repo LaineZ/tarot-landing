@@ -1,7 +1,7 @@
 <div *ngIf="isOpen" class="modal-overlay">
   <div class="modal">
     <div class="modal-header">
-      <button (click)="closeModal()">×</button>
+      <button *ngIf="closeable" (click)="closeModal()">×</button>
     </div>
     <div class="modal-content">
       <ng-content></ng-content>

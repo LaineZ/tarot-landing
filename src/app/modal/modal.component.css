@@ -26,6 +26,7 @@
   border-radius: 20px;
   padding: 20px;
   animation: fadeIn 0.3s ease-in-out;
+  color: black !important;
 }
 
 .modal-header {
@@ -39,4 +40,9 @@
   font-size: 20px;
 }
 
-
+@media (max-width: 800px) {
+  .modal {
+    overflow-y: scroll;
+    max-height: 97vh;
+  }
+}

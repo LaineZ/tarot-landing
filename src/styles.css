@@ -243,3 +243,25 @@ body {
 .no-scroll {
   overflow: hidden;
 }
+
+.modal-message {
+  min-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.modal-message button {
+  background-color: #25AE88;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 10px;
+  color: #e7f1fe;
+  transition: background-color 200ms;
+}
+
+.modal-message button:hover {
+  background-color: #0a523f;
+  transition: background-color 200ms;
+}
+
