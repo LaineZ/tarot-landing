@@ -57,12 +57,12 @@
   content: "";
   position: absolute;
   width: 200vw;
-  height: 50%;
+  height: 40%;
   z-index: 1;
   background-color: #e7f1fe;
-  transform: rotate(4deg);
-  left: -50px;
-  bottom: -20%;
+  transform: rotate(10deg);
+  left: -200%;
+  bottom: -32%;
 }
 
 .price-list {
@@ -134,23 +134,23 @@ table {
   }
 
   .main:before {
-    height: 28%;
+    height: 30%;
     transform: rotate(4deg);
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   table, h1 {
     font-size: unset;
   }
 
   h2 {
-    font-size: 4vw;
+    font-size: clamp(1px, 4vw, 18px);
   }
 
   .prices {
     padding-top: 20px;
-    min-height: 700px;
+    min-height: 540px;
   }
 
   .price-list {
@@ -173,6 +173,7 @@ table {
   }
 
   .contact {
+    flex-direction: row-reverse;
     display: flex;
     margin-top: 20px;
     flex: 1;

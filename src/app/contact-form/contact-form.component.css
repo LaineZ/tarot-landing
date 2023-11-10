@@ -1,8 +1,6 @@
 form {
-  margin-top: 100px;
   text-align: unset;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 10px 10px 20px;
 }
 
 form input {
@@ -36,8 +34,16 @@ form input[type="checkbox"] {
   margin: 0 10px 0 0;
   transition: 200ms;
   padding: 0;
+  flex-shrink: 0;
 }
 
+form .mobile-label {
+  margin-left: 15px;
+  margin-bottom: 2px;
+  font-size: 12px;
+  text-align: left !important;
+  display: none;
+}
 
 form input[type="checkbox"]:checked {
   background-color: var(--accent);
@@ -111,32 +117,32 @@ form p {
   font-size: 18px;
 }
 
-@media (max-width: 700px) {
-  .main {
-    margin-top: -15%;
-    background-size: 500% 139%;
-    background-position: 68% 11%;
-  }
-
+@media (max-width: 800px) {
   form {
-    margin-top: 50px;
-    margin-left: 20px;
-    margin-right: 20px;
     font-size: unset;
   }
 
   form input {
     padding: 15px;
+    font-size: 0.9em;
   }
 
   form p {
     text-align: center;
+    font-size: unset;
   }
 
   form input[type=submit] {
     width: 80%;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 5.2vw;
+  }
+}
+
+
+@media (max-width: 390px) {
+  .mobile-label {
+    display: block !important;
   }
 }

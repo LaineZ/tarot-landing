@@ -27,6 +27,7 @@
   padding: 20px;
   animation: fadeIn 0.3s ease-in-out;
   color: black !important;
+  max-width: 80%;
 }
 
 .modal-header {
@@ -44,5 +45,6 @@
   .modal {
     overflow-y: scroll;
     max-height: 97vh;
+    max-width: 100%;
   }
 }

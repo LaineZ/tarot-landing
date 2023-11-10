@@ -9,8 +9,7 @@
       <div class="signup">
         <p><strong>Получите консультацию по своему запросу</strong></p>
         <div class="signup-button">
-          <div class="signup-background"></div>
-          <button>ЗАПИСАТЬСЯ</button>
+          <button (click)="modalContact.openModal()">ЗАПИСАТЬСЯ</button>
         </div>
       </div>
     </div>
@@ -24,8 +23,7 @@
     <div class="description">
       <div class="signup">
         <div class="signup-button">
-          <div class="signup-background"></div>
-          <button>ЗАПИСАТЬСЯ</button>
+          <button (click)="modalContact.openModal()">ЗАПИСАТЬСЯ</button>
         </div>
       </div>
     </div>
@@ -34,4 +32,19 @@
     Пришло время заглянуть в себя, чтобы наконец почувствовать удачу,
       <strong>стать самыми счастливыми, здоровыми и богатыми!</strong>
   </div>
+
+  <app-modal #modalContact>
+    <h2 style="text-align: center; color: black; margin: 0;">Связь</h2>
+    <app-contact-form style="color: black;" (onSent)="modalSuccess.openModal()"></app-contact-form>
+  </app-modal>
+
+  <app-modal #modalSuccess [closeable]="false">
+    <div class="modal-message">
+      <img src="/assets/images/success.svg" width="128">
+      <br>
+      <h2>Успешно</h2>
+      <p>С вами свяжутся в ближайшее время</p>
+      <button (click)="modalContact.closeModal(); modalSuccess.closeModal();">ОК</button>
+    </div>
+  </app-modal>
 </div>
