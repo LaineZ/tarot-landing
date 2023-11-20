@@ -1,9 +1,7 @@
 .main {
-  min-height: 1180px;
-  height: 100vh;
-  background: url("/assets/images/bg.webp");
-  background-repeat: no-repeat;
-  background-position: center center;
+  min-height: 100%;
+  height: 100%;
+  background: url("/assets/images/bg.webp") no-repeat center center;
   background-size: cover;
   overflow: hidden;
   width: 100%;
@@ -42,8 +40,7 @@ h3 {
   position: relative;
 }
 
-.signup-button button {
-  margin-top: 60px;
+.signup-button {
   border: 10px solid #e7f1fe;
   background-color: #8c52ff;
   color: white;
@@ -55,6 +52,7 @@ h3 {
   border-radius: 100px;
   position: relative;
   transition: all 300ms;
+  cursor: pointer;
 }
 
 .signup-button button:hover {
@@ -85,17 +83,17 @@ h3 {
 .content-mobile {
   display: none;
   margin: 40px 10px 10px 10px;
-  position: relative;
 }
 
-.mobile-description-additional {
-  position: absolute;
+.mobile-description-additional-paragraph {
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.74);
-  bottom: 13vh;
   font-size: 5vw;
-  margin-left: 10px;
-  margin-right: 10px;
+  text-align: center;
+  margin: 16px 10px 5px;
+}
+
+.mobile-description-additional-wrapper {
   display: none;
 }
 
@@ -105,10 +103,8 @@ h3 {
   }
 
   .main {
-    background: url("/assets/images/bg-mobile.webp");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center bottom;
+    background: url("/assets/images/bg-mobile.webp") no-repeat center bottom;
     min-height: unset;
   }
 
@@ -123,8 +119,10 @@ h3 {
     display: none;
   }
 
-  .mobile-description-additional {
-    display: block;
+  .mobile-description-additional-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .content-mobile {
@@ -154,7 +152,7 @@ h3 {
     font-size: 5vw;
   }
 
-  .signup-button button {
+  .signup-button {
     font-size: 5vw;
     min-width: unset;
     width: unset;
@@ -166,4 +164,36 @@ h3 {
   .main {
     min-height: unset;
   }
+}
+
+.sign-up-paragraph {
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.social-webs-icons-paragraph {
+  font-size: 2em !important;
+}
+
+.icons-menu {
+  cursor: pointer;
+}
+
+.social-link {
+  margin-right: 20px;
+}
+
+.social-icon {
+  width: 100px;
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover .social-icon {
+  transform: scale(1.2);
+}
+
+.mobile-icon-paragraph {
+  text-align: center;
+  font-size: 5vw;
+  margin: 0;
 }

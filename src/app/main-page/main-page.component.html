@@ -7,9 +7,23 @@
         <strong>стать самыми счастливыми, здоровыми и богатыми!</strong>
       </p>
       <div class="signup">
-        <p><strong>Получите консультацию по своему запросу</strong></p>
-        <div class="signup-button">
-          <button (click)="modalContact.openModal()">ЗАПИСАТЬСЯ</button>
+        <p class="sign-up-paragraph">Получите консультацию по своему запросу заполнив форму</p>
+        <div class="signup-buttons-wrapper">
+          <button (click)="modalContact.openModal()" class="signup-button">ЗАПИСАТЬСЯ</button>
+          <p class="social-webs-icons-paragraph">У Вас срочный вопрос? Напишите мне в мессенджер:</p>
+          <div class="icons-menu">
+            <a class="social-link"  href="https://t.me/valeriya_astropsy">
+              <img class="social-icon" src="../../assets/images/telegram-color.webp" >
+            </a>
+
+            <a class="social-link" href="https://wa.me/905380738432">
+              <img class="social-icon" src="../../assets/images/whats-app-color.webp" >
+            </a>
+
+            <a class="social-link" href="https://viber.click/905380738432">
+              <img class="social-icon" src="../../assets/images/viber-color.png" >
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -17,20 +31,42 @@
   <div class="content-mobile">
     <div class="heading">
       <h1>ВАЛЕРИЯ АСТРОЛОГ</h1>
-      <h3>АСТРО-ПСИЛОГИЯ И ТАРО</h3>
+      <h3>АСТРО-ПСИХОЛОГИЯ И ТАРО</h3>
       <h3><strong>Получите консультацию<br>по своему запросу</strong></h3>
     </div>
     <div class="description">
       <div class="signup">
-        <div class="signup-button">
-          <button (click)="modalContact.openModal()">ЗАПИСАТЬСЯ</button>
+        <div >
+          <button class="signup-button" (click)="modalContact.openModal()">ЗАПИСАТЬСЯ</button>
         </div>
       </div>
     </div>
   </div>
-  <div class="mobile-description-additional">
-    Пришло время заглянуть в себя, чтобы наконец почувствовать удачу,
-      <strong>стать самыми счастливыми, здоровыми и богатыми!</strong>
+  <div class="mobile-description-additional-wrapper">
+      <p class="mobile-description-additional-paragraph">
+      Пришло время заглянуть в себя, чтобы наконец почувствовать удачу,
+      стать самыми счастливыми, здоровыми и богатыми!
+      </p>
+
+    <p class="mobile-icon-paragraph">
+      У вас срочный вопрос ? <br>
+      Напишите мне в мессенджер:
+    </p>
+
+
+    <div class="icons-menu">
+      <a class="social-link"  href="https://t.me/valeriya_astropsy">
+        <img class="social-icon" width="64px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png" >
+      </a>
+
+      <a class="social-link" href="https://wa.me/905380738432">
+        <img class="social-icon" width="64px" src="assets/images/whats-app-color.webp" >
+      </a>
+
+      <a class="social-link" href="viber://add?number=905380738432">
+        <img class="social-icon" width="64px" src="assets/images/viber-color.png" >
+      </a>
+    </div>
   </div>
 
   <app-modal #modalContact>

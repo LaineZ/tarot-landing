@@ -3,8 +3,8 @@
   <input type="text" name="question" [(ngModel)]="formData.question"  placeholder="КОРОТКО СУТЬ ИНТЕРЕСУЮЩЕГО ВОПРОСА">
   <label class="mobile-label">Ваше имя:</label>
   <input type="text" name="name" [(ngModel)]="formData.name"  placeholder="ВАШЕ ИМЯ">
-  <label class="mobile-label">Номер телефона*:</label>
-  <input type="tel" name="phone" [(ngModel)]="formData.phone"  placeholder="НОМЕР ТЕЛЕФОНА (обязательное поле)*" mask="+0000 000 00-00" required [ngClass]="{'invalid-input': phoneFormatError}">
+  <label class="mobile-label">Номер телефона где у вас есть Telegram/Viber/WhatsApp*:</label>
+  <input type="tel" name="phone" [(ngModel)]="formData.phone"  placeholder="НОМЕР ТЕЛЕФОНА ГДЕ У ВАС ЕСТЬ Telegram/Viber/WhatsApp (обязательное поле)*" mask="+0000 000 00-00" required [ngClass]="{'invalid-input': phoneFormatError}">
   <label class="mobile-label">Email*:</label>
   <input type="email" name="email" [(ngModel)]="formData.email"  placeholder="EMAIL (обязательное поле)*" required [ngClass]="{'invalid-input': emailFormatError}">
   <input type="submit" value="Получить консультацию" [disabled]="sending">

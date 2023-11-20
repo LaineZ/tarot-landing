@@ -32,5 +32,4 @@ export class ReviewsStateService {
   getData(): IReview[] {
     return this.data;
   }
-  constructor() { }
 }
